@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Evaluate mathematical expressions
     function evaluateExpression(expression) {
         const safeExpression = expression
-            .replace(/sin\(/g, "Math.sin(toRadians(")
-            .replace(/cos\(/g, "Math.cos(toRadians(")
-            .replace(/tan\(/g, "Math.tan(toRadians(")
+            .replace(/sin\(/g, "Math.sin(" + Math.PI/180 + "*")
+            .replace(/cos\(/g, "Math.cos(" + Math.PI/180 + "*")
+            .replace(/tan\(/g, "Math.tan((" + Math.PI/180 + "*")
             .replace(/log\(/g, "Math.log10(")
             .replace(/sqrt\(/g, "Math.sqrt(")
             .replace(/pi/g, "Math.PI")
