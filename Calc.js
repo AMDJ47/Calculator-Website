@@ -5,11 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     window.appendToDisplay = function(value) {
         display.value += value;
     };
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+    
 
     // Clear the display
     window.clearDisplay = function() {
         display.value = "";
     };
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+    
 
     // Delete the last character
     window.deleteLast = function() {
